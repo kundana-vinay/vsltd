@@ -1,0 +1,111 @@
+:root {
+  /* --color-dark: #896C6C;
+  --color-pink: #E5BEB5;
+  --color-beige: #EEE6CA;
+  --color-light: #F5FAE1; */
+
+  --color-dark: #121212;
+  --color-pink:  #ffffff;
+  --color-beige: #DBE2EF;
+  --color-light: #F9F7F7;
+}
+
+body {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: Arial, sans-serif;
+}
+/* Navbar Styles */
+.navbar {
+  background-color: var(--color-dark) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-light) !important;
+  letter-spacing: 1px;
+}
+
+/* Navbar Links */
+.navbar .nav-link {
+  position: relative;
+  margin-left: 15px;
+  color: var(--color-light) !important;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Underline Hover Effect */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: var(--color-pink);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar .nav-link:hover {
+  color: var(--color-pink) !important;
+}
+
+/* Active link highlight */
+.navbar .nav-link.active {
+  color: var(--color-pink) !important;
+}
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* Scroll effect: darker background */
+.navbar.scrolled {
+  background-color: #6d5555 !important; /* slightly darker shade of var(--color-dark) */
+}
+
+
+/* Hero */
+.hero {
+  background: var(--color-pink);
+  color: var(--color-dark);
+  padding: 100px 20px;
+  text-align: center;
+}
+.hero img {
+  max-width: 350px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Cards */
+.card {
+  background: var(--color-beige);
+  border: none;
+  border-radius: 12px;
+}
+.card-title {
+  color: var(--color-dark);
+}
+
+/* Footer */
+footer {
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: 30px 0;
+}
+footer a {
+  color: var(--color-pink);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--color-light);
+}
